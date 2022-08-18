@@ -1,0 +1,9 @@
+.navigation {
+    background-color: rgba(0, 162, 255, 0.774);
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
