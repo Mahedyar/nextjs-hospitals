@@ -2,7 +2,7 @@ import classes from "../../../../styles/TopPar.module.css";
 import useWindowDimensions from "../../../../hooks/useWindowDimensions";
 
 const TopPart = (props) => {
-  if (typeof window !== "undefined") {
+ 
     const { windowHeight, windowWidth } = useWindowDimensions();
     return (
       <div
@@ -63,7 +63,7 @@ const TopPart = (props) => {
         )}
       </div>
     );
-  }
+  
 
   // console.log(` windowWidth : ${windowWidth}`);
   // console.log(typeof windowWidth);

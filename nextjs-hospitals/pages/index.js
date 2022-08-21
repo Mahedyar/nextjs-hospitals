@@ -17,6 +17,9 @@ export default function Home() {
   
     return (
       <>
+      <Head>
+        <title>سایت جامع بیمارستان های تهران</title>
+      </Head>
         <Navigation onFilter={hospitalFilterHandler} />
         <Hospitals />
         {/* <SingleHospital

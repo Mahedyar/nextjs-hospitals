@@ -13,8 +13,10 @@ export function getAllHospitalIds() {
 
 export function getHospitalData(id) {
   const { HospitalsData } = HOSPITALS;
-  const choosedHospital = HospitalsData.filter(
+  const choosedHospitalArray = HospitalsData.filter(
     (hospital) => hospital.id === id
   );
+  const [choosedHospital] = choosedHospitalArray
+  // console.log(choosedHospital);
   return choosedHospital;
 }

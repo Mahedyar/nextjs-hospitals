@@ -35,7 +35,7 @@ export default {
     },
     {
       id:"Parsa",
-      name: "بیمارستان بهارلو",
+      name: "پارسا",
       proficiency: "عمومی",
       type: "دولتی",
       institude: "دانشگاه علوم پزشکی",
@@ -62,7 +62,7 @@ export default {
     },
     {
       id:"Farabi",
-      name: "بیمارستان بهارلو",
+      name: "فارابی",
       proficiency: "عمومی",
       type: "دولتی",
       institude: "دانشگاه علوم پزشکی",

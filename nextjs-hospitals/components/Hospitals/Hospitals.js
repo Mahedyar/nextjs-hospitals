@@ -16,7 +16,9 @@ const Hospitals = (props) => {
   const [searchValue, setSearchValue] = useState("");
   const filteredItems = getFilteredItems(searchValue, HospitalsData);
   const HospitalItems = filteredItems.map((item) => (
-    <HospitalBlock city={item.city}>{item.name}</HospitalBlock>
+    <HospitalBlock id={item.id} image={item.image}>
+      بیمارستان {item.name}{" "}
+    </HospitalBlock>
   ));
   return (
     <>
