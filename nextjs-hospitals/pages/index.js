@@ -22,22 +22,6 @@ export default function Home() {
       </Head>
         <Navigation onFilter={hospitalFilterHandler} />
         <Hospitals />
-        {/* <SingleHospital
-          // name={Hospital.name}
-          // proficiency={Hospital.proficiency}
-          // type={Hospital.type}
-          // institude={Hospital.institude}
-          // state={Hospital.state}
-          // city={Hospital.city}
-          // region={Hospital.region}
-          // phNumber={Hospital.phoneNumber}
-          // fax={Hospital.fax}
-          // address={Hospital.address}
-          // website={Hospital.website}
-          // email={Hospital.email}
-          // image={Hospital.image}
-          hospital = {hospital}
-        /> */}
       </>
     );
 }

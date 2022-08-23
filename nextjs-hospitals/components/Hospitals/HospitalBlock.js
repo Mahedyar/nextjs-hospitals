@@ -12,7 +12,7 @@ const HospitalBlock = (props) => {
         <div className={classes["container-block"]}>
           <img src={props.image} className={classes.imageHolder} />
           <div className={classes["text-holder"]}>
-            <div className={classes.innerText}>{props.children}</div>
+            <div className={classes.innerText}>بیمارستان {props.name}{" "}</div>
           </div>
         </div>
       </Link>

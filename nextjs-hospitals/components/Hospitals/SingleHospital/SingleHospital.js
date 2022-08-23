@@ -26,7 +26,14 @@ const SingleHospital = (props) => {
           email={props.hospital.email}
           image={props.hospital.image}
         />
-        <div className={classes.medicalAreas}>
+        <div className={`${classes.bottomBoxes} `}>
+          <div className={classes["medicalAreas-title"]}>
+            {" "}
+            معرفی بیمارستان {props.hospital.name}{" "}
+          </div>
+          <div>{props.hospital.introduction}</div>
+        </div>
+        <div className={`${classes.bottomBoxes} , ${classes.medicalAreas} `}>
           <div className={classes["medicalAreas-title"]}>بخش های درمانی</div>
           <div>{props.hospital.medicalAreas}</div>
         </div>

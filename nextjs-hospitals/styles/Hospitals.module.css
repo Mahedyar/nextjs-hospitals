@@ -1,7 +1,26 @@
+.centerMaker {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
 .hospitals-container {
-    margin: 6rem 20rem;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    column-gap: 2rem;
-    row-gap: 4rem;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  column-gap: 2rem;
+  row-gap: 4rem;
+}
+
+.searchBox {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.searchBox input {
+  text-align: right;
+  width: 30%;
+  padding: 0.7rem;
+  border-radius: 10px;
+  font-size: 16px;
 }
