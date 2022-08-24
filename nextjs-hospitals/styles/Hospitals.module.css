@@ -1,15 +1,21 @@
 .centerMaker {
   display: flex;
   justify-content: center;
-  margin-top: 4rem;
+  margin: 4rem 15%;
 }
 
-.hospitals-container {
+.hospitals-container__fullSize {
   display: grid;
-  grid-template-columns: auto auto auto auto;
   column-gap: 2rem;
   row-gap: 4rem;
 }
+
+/* .hospitals-container__mobileSize{
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 2rem;
+  row-gap: 4rem;
+} */
 
 .searchBox {
   display: flex;

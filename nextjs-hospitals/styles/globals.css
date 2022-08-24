@@ -14,5 +14,14 @@
 
 html , body{
   font-family: "Dana" , sans-serif;
- 
+  margin: 0px;
+  /* padding: 0px; */
 }
+
+a{
+  color : #0070f3;
+  text-decoration: none;
+}
+/* a:hover {
+  text-decoration: none;
+} */

@@ -4,9 +4,18 @@
 }
 
 .hospitalName {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
   font-weight: bold;
   font-size: 1.5rem;
   margin-bottom: 2rem;
+
+}
+
+.hospitalName a{
+  font-weight: normal;
+  font-size: 1.3rem;
 }
 
 .bottomBoxes {
@@ -22,8 +31,8 @@
  
 }
 
-.introduction {
-}
+/* .introduction {
+} */
 
 .medicalAreas-title {
   margin-bottom: 1rem;

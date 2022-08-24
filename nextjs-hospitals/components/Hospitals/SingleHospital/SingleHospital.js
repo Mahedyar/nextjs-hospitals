@@ -1,6 +1,7 @@
 import HOSPITALS from "../../../HOSPITALS";
 import TopPart from "./TopPart/TopPart";
 import classes from "../../../styles/SingleHospital.module.css";
+import Link from "next/link";
 
 const SingleHospital = (props) => {
   return (
@@ -8,7 +9,12 @@ const SingleHospital = (props) => {
       <div className={classes.contentContainer}>
         <div>
           <div className={classes.hospitalName}>
-            بیمارستان {props.hospital.type} {props.hospital.name}{" "}
+            <span>
+              بیمارستان {props.hospital.type} {props.hospital.name}{" "}
+            </span>
+            <Link href="/">
+              <a>بازگشت به خانه ←</a>
+            </Link>
           </div>
           {/* <div>نوع تخصص : {props.hospital.proficiency}</div> */}
           {/* <div>بیمارستان {props.hospital.type}</div> */}

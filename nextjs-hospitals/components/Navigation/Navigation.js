@@ -4,7 +4,7 @@ const Navigation = (props) => {
   return (
     <>
       <div className={classes.navigation}>
-        <span>صفحه اصلی</span>
+        <span> بانک اطلاعات بیمارستان های تهران</span>
       </div>
     </>
   );
