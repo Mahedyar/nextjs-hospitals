@@ -22,12 +22,12 @@
   width: 100%;
   background-color: white;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3) , 0px -5px 20px rgba(0, 0, 0, 0.205) ;
-  padding: 1rem;
+  padding: 2rem;
   margin-top: 5rem;
   line-height: 2rem;
 }
 .medicalAreas {
-  height: 20rem;
+  /* height: 20rem; */
  
 }
 

@@ -1,4 +1,4 @@
-import HOSPITALS from "../../../HOSPITALS";
+
 import TopPart from "./TopPart/TopPart";
 import classes from "../../../styles/SingleHospital.module.css";
 import Link from "next/link";

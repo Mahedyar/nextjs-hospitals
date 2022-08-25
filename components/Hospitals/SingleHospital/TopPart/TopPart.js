@@ -1,12 +1,16 @@
 import classes from "../../../../styles/TopPar.module.css";
 import useWindowDimensions from "../../../../hooks/useWindowDimensions";
 import useWindowSize from "../../../../hooks/useWindowSize";
+import { Link } from "../../../../lib/Link";
+
 
 const TopPart = (props) => {
-  
+  const website = props.website
+  console.log(website);
   const windowWidth = useWindowSize();
   // const windowWidth = useWindowDimensions()
   // console.log(windowWidth)
+ 
   
   return (
     <div
@@ -53,11 +57,14 @@ const TopPart = (props) => {
         </div>
         <div>
           وبسایت :{" "}
-          <span className={classes.boldText}>&nbsp;{props.website}</span>
+          
+        <Link href={website}>
+        <a  className={classes.boldText}>&nbsp;{props.website}</a>
+        </Link>
         </div>
         <div>
           پست الکترونیک :{" "}
-          <span className={classes.boldText}>&nbsp;{props.email}</span>
+          <a className={classes.boldText}>&nbsp;{props.email}</a>
         </div>
       </div>
       {windowWidth > 769 && (

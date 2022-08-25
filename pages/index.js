@@ -5,7 +5,7 @@ import { useRef } from "react";
 import Hospitals from "../components/Hospitals/Hospitals";
 import SingleHospital from "../components/Hospitals/SingleHospital/SingleHospital";
 import Navigation from "../components/Navigation/Navigation";
-import HOSPITALS from "../HOSPITALS";
+import HOSPITALS from "../lib/HOSPITALS";
 import useWindowSize from "../hooks/useWindowSize";
 
 const { HospitalsData } = HOSPITALS;
