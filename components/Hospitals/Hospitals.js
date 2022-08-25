@@ -46,7 +46,7 @@ const Hospitals = (props) => {
           className={classes["hospitals-container__fullSize"]}
           style={{
             gridTemplateColumns: `${
-              windowWidth > 769 ? "auto auto auto auto" : "auto auto"
+              windowWidth > 769 ? "auto auto auto auto" : "auto "
             }`,
           }}
         >
