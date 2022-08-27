@@ -1,23 +1,35 @@
-
 import TopPart from "./TopPart/TopPart";
 import classes from "../../../styles/SingleHospital.module.css";
 import Link from "next/link";
+import useWindowSize from "../../../hooks/useWindowSize";
 
 const SingleHospital = (props) => {
+  const windowWidth = useWindowSize();
   return (
     <>
       <div className={classes.contentContainer}>
-        <div>
-          <div className={classes.hospitalName}>
-            <span>
-              بیمارستان {props.hospital.type} {props.hospital.name}{" "}
-            </span>
+        {windowWidth < 426 && (
+          <div
+            //  style={{text-align : "left"}}
+            style={{ textAlign: "left", marginBottom: ".5rem" }}
+          >
+            <Link href="/">
+              <a style={{ fontSize: "0.8rem" }}>بازگشت به خانه ←</a>
+            </Link>
+          </div>
+        )}
+        <div
+          className={classes.hospitalName}
+          style={{ fontSize: `${windowWidth > 426 ? "" : "0.8rem"}` }}
+        >
+          <span>
+            بیمارستان {props.hospital.type} {props.hospital.name}{" "}
+          </span>
+          {windowWidth > 426 && (
             <Link href="/">
               <a>بازگشت به خانه ←</a>
             </Link>
-          </div>
-          {/* <div>نوع تخصص : {props.hospital.proficiency}</div> */}
-          {/* <div>بیمارستان {props.hospital.type}</div> */}
+          )}
         </div>
         <TopPart
           proficiency={props.hospital.proficiency}
@@ -32,14 +44,20 @@ const SingleHospital = (props) => {
           email={props.hospital.email}
           image={props.hospital.image}
         />
-        <div className={`${classes.bottomBoxes} `}>
+        <div
+          className={`${classes.bottomBoxes} `}
+          style={{ fontSize: `${windowWidth > 426 ? "" : "0.8rem"}` }}
+        >
           <div className={classes["medicalAreas-title"]}>
             {" "}
             معرفی بیمارستان {props.hospital.name}{" "}
           </div>
           <div>{props.hospital.introduction}</div>
         </div>
-        <div className={`${classes.bottomBoxes} , ${classes.medicalAreas} `}>
+        <div
+          className={`${classes.bottomBoxes} , ${classes.medicalAreas} `}
+          style={{ fontSize: `${windowWidth > 426 ? "" : "0.8rem"}` }}
+        >
           <div className={classes["medicalAreas-title"]}>بخش های درمانی</div>
           <div>{props.hospital.medicalAreas}</div>
         </div>

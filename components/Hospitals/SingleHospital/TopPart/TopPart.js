@@ -3,15 +3,10 @@ import useWindowDimensions from "../../../../hooks/useWindowDimensions";
 import useWindowSize from "../../../../hooks/useWindowSize";
 import { Link } from "../../../../lib/Link";
 
-
 const TopPart = (props) => {
-  const website = props.website
+  const website = props.website;
   console.log(website);
   const windowWidth = useWindowSize();
-  // const windowWidth = useWindowDimensions()
-  // console.log(windowWidth)
- 
-  
   return (
     <div
       className={classes["topBar-container"]}
@@ -24,7 +19,10 @@ const TopPart = (props) => {
       )}
       <div
         className={classes["topBar-listItems"]}
-        style={{ width: `${windowWidth < 769 ? "100%" : "45%"}` }}
+        style={{
+          width: `${windowWidth < 769 ? "100%" : "45%"}`,
+          fontSize: `${windowWidth > 426 ? "" : "0.7rem"}`,
+        }}
       >
         <div>
           نوع تخصص :{" "}
@@ -57,10 +55,9 @@ const TopPart = (props) => {
         </div>
         <div>
           وبسایت :{" "}
-          
-        <Link href={website}>
-        <a  className={classes.boldText}>&nbsp;{props.website}</a>
-        </Link>
+          <Link href={website}>
+            <a className={classes.boldText}>&nbsp;{props.website}</a>
+          </Link>
         </div>
         <div>
           پست الکترونیک :{" "}

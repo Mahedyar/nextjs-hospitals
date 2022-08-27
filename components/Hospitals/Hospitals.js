@@ -10,7 +10,12 @@ const getFilteredItems = (searchValue, defaultItems) => {
   if (!searchValue) {
     return defaultItems;
   }
-  return defaultItems.filter((item) => item.name.includes(searchValue));
+  return defaultItems.filter(
+    (item) =>
+      item.name.includes(searchValue) ||
+      item.type.includes(searchValue) ||
+      item.medicalAreas.includes(searchValue)
+  );
 };
 
 const Hospitals = (props) => {
