@@ -5,7 +5,11 @@ import { useState } from "react";
 import useWindowSize from "../../hooks/useWindowSize";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 
-const { HospitalsData } = HOSPITALS;
+
+
+// const { HospitalsData } = HOSPITALS;
+
+
 const getFilteredItems = (searchValue, defaultItems) => {
   if (!searchValue) {
     return defaultItems;
@@ -24,7 +28,7 @@ const Hospitals = (props) => {
   // const windowWidth = windowSize.windowWidth
   // console.log(windowWidth);
   const [searchValue, setSearchValue] = useState("");
-  const filteredItems = getFilteredItems(searchValue, HospitalsData);
+  const filteredItems = getFilteredItems(searchValue, props.hospitalsData);
   const HospitalItems = filteredItems.map((item) => (
     <HospitalBlock
       key={item.id}

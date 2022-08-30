@@ -1,8 +1,10 @@
 import SingleHospital from "../../components/Hospitals/SingleHospital/SingleHospital";
 import { getAllHospitalIds, getHospitalData } from "../../lib/DataManager";
 import Head from "next/head";
+
 export async function getStaticPaths() {
   const paths = getAllHospitalIds();
+  console.log(paths);
   return {
     paths,
     fallback: false,
@@ -17,6 +19,8 @@ export async function getStaticProps({ params }) {
     },
   };
 }
+
+
 
 const Hospital = ({ hospitalData }) => {
   // console.log(hospitalData);
