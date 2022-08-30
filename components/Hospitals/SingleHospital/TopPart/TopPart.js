@@ -1,11 +1,10 @@
 import classes from "../../../../styles/TopPar.module.css";
-import useWindowDimensions from "../../../../hooks/useWindowDimensions";
 import useWindowSize from "../../../../hooks/useWindowSize";
 import { Link } from "../../../../lib/Link";
 
 const TopPart = (props) => {
   const website = props.website;
-  console.log(website);
+  // console.log(website);
   const windowWidth = useWindowSize();
   return (
     <div
@@ -33,14 +32,14 @@ const TopPart = (props) => {
           سازمان متبوع :{" "}
           <span className={classes.boldText}>&nbsp;{props.institude}</span>
         </div>
-        <div>
+        {/* <div>
           استان : <span className={classes.boldText}>&nbsp;{props.state}</span>{" "}
           ، شهرستان :{" "}
           <span className={classes.boldText}>&nbsp;{props.city}</span>
-        </div>
+        </div> */}
         <div>
           {" "}
-          منطقه:<span className={classes.boldText}>&nbsp;{props.region} </span>
+           منطقه (تهران):<span className={classes.boldText}>&nbsp;{props.region} </span>
         </div>
         <div>
           تلفن:{" "}

@@ -1,10 +1,11 @@
+
 .centerMaker {
   display: flex;
   justify-content: center;
   margin: 4rem 15%;
 }
 
-.hospitals-container__fullSize {
+.hospitals-container {
   display: grid;
   column-gap: 2rem;
   row-gap: 4rem;
@@ -22,6 +23,16 @@
   justify-content: center;
   margin-top: 5rem;
 }
+
+.searchText{
+  display: flex;
+  direction: rtl;
+  justify-content: center;
+  margin-top: 2rem;
+  color: gray;
+  /* width: 30%; */
+}
+
 
 .searchBox input {
   text-align: right;

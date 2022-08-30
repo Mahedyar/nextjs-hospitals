@@ -4,7 +4,7 @@ import Head from "next/head";
 
 export async function getStaticPaths() {
   const paths = getAllHospitalIds();
-  console.log(paths);
+  // console.log(paths);
   return {
     paths,
     fallback: false,
