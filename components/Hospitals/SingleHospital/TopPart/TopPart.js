@@ -1,7 +1,7 @@
 import classes from "../../../../styles/TopPar.module.css";
 import useWindowSize from "../../../../hooks/useWindowSize";
 import { Link } from "../../../../lib/Link";
-import Image from "next/image";
+// import Image from "next/image";
 
 const TopPart = (props) => {
   // const website = props.website;
@@ -14,8 +14,8 @@ const TopPart = (props) => {
     >
       {windowWidth < 769 && (
         <div>
-          {/* <img  className={classes["topBar-image"]} src={props.image} /> */}
-          <Image  className={classes["topBar-image"]} src={props.image} width={500} height={500}/>
+          <img  className={classes["topBar-image"]} src={props.image} />
+          {/* <Image  className={classes["topBar-image"]} src={props.image} width={500} height={500}/> */}
         </div>
       )}
       <div
@@ -70,8 +70,8 @@ const TopPart = (props) => {
       </div>
       {windowWidth > 769 && (
         <div style={{ width: "45%" }}>
-          {/* <img className={classes["topBar-image"]} src={props.image} /> */}
-          <Image  className={classes["topBar-image"]} src={props.image} width={500} height={500}/>
+          <img className={classes["topBar-image"]} src={props.image} />
+          {/* <Image  className={classes["topBar-image"]} src={props.image} width={500} height={500}/> */}
         </div>
       )}
     </div>

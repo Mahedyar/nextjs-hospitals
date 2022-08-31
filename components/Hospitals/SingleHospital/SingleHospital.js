@@ -2,7 +2,7 @@ import TopPart from "./TopPart/TopPart";
 import classes from "../../../styles/SingleHospital.module.css";
 import Link from "next/link";
 import useWindowSize from "../../../hooks/useWindowSize";
-import MedicalAreas  from "./medicalAreas";
+import MedicalAreas  from "./MedicalAreas";
 
 const SingleHospital = (props) => {
   const windowWidth = useWindowSize();
