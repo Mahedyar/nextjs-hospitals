@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "../.././../styles/MedicalAreas.module.css";
 import useWindowSize from "../../../hooks/useWindowSize";
-export const MedicalAreas = (props) => {
+ const MedicalAreas = (props) => {
   const windowWidth = useWindowSize();
   return (
     <div>
@@ -52,3 +52,5 @@ export const MedicalAreas = (props) => {
     </div>
   );
 };
+
+export default MedicalAreas
