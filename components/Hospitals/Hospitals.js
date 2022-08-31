@@ -40,13 +40,15 @@ const Hospitals = (props) => {
             setSearchValue(e.target.value);
           }}
           placeholder="...جستجو"
-          style={{ fontFamily: "Dana" }}
+          style={{
+            fontFamily: "Dana",
+            width: `${windowWidth > 426 ? "30%" : "60%"}`,
+          }}
         />
       </div>
       {searchValue.length > 0 && (
         <div className={classes.searchText}>
-           {/* : "{searchValue}" نتیجه جستجو در ارتباط با */}
-           نتیجه جستجو در ارتباط با "{searchValue}" :
+          نتیجه جستجو در ارتباط با `{searchValue}` :
         </div>
       )}
 

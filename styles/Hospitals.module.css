@@ -36,7 +36,7 @@
 
 .searchBox input {
   text-align: right;
-  width: 30%;
+  /* width: 30%; */
   padding: 0.7rem;
   border-radius: 10px;
   font-size: 16px;

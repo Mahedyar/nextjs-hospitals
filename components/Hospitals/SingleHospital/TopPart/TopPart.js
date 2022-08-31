@@ -3,7 +3,7 @@ import useWindowSize from "../../../../hooks/useWindowSize";
 import { Link } from "../../../../lib/Link";
 
 const TopPart = (props) => {
-  const website = props.website;
+  // const website = props.website;
   // console.log(website);
   const windowWidth = useWindowSize();
   return (
@@ -27,41 +27,44 @@ const TopPart = (props) => {
           نوع تخصص :{" "}
           <span className={classes.boldText}>&nbsp;{props.proficiency}</span>
         </div>
-        {/* <div>بیمارستان {props.type}</div> */}
+
         <div>
           سازمان متبوع :{" "}
           <span className={classes.boldText}>&nbsp;{props.institude}</span>
         </div>
-        {/* <div>
-          استان : <span className={classes.boldText}>&nbsp;{props.state}</span>{" "}
-          ، شهرستان :{" "}
-          <span className={classes.boldText}>&nbsp;{props.city}</span>
-        </div> */}
+
         <div>
           {" "}
-           منطقه (تهران):<span className={classes.boldText}>&nbsp;{props.region} </span>
+          منطقه (تهران):
+          <span className={classes.boldText}>&nbsp;{props.region} </span>
         </div>
         <div>
           تلفن:{" "}
           <span className={classes.boldText}>&nbsp;{props.phoneNumber}</span>
         </div>
-        <div>
-          فکس : <span className={classes.boldText}>&nbsp;{props.fax}</span>
-        </div>
+        {props.fax.length > 0 && (
+          <div>
+            فکس : <span className={classes.boldText}>&nbsp;{props.fax}</span>
+          </div>
+        )}
         <div>
           نشانی :{" "}
           <span className={classes.boldText}>&nbsp;{props.address}</span>
         </div>
-        <div>
-          وبسایت :{" "}
-          <Link href={website}>
-            <a className={classes.boldText}>&nbsp;{props.website}</a>
-          </Link>
-        </div>
-        <div>
-          پست الکترونیک :{" "}
-          <a className={classes.boldText}>&nbsp;{props.email}</a>
-        </div>
+        {props.website.length > 0 && (
+          <div>
+            وبسایت :{" "}
+            <Link href={props.website}>
+              <a className={classes.boldText}>&nbsp;{props.website}</a>
+            </Link>
+          </div>
+        )}
+        {props.email.length > 0 && (
+          <div>
+            پست الکترونیک :{" "}
+            <a className={classes.boldText}>&nbsp;{props.email}</a>
+          </div>
+        )}
       </div>
       {windowWidth > 769 && (
         <div style={{ width: "45%" }}>
