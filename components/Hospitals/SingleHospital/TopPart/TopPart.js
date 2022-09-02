@@ -14,7 +14,7 @@ const TopPart = (props) => {
     >
       {windowWidth < 769 && (
         <div>
-          <img  className={classes["topBar-image"]} src={props.image} />
+          <img className={classes["topBar-image"]} src={props.image} />
           {/* <Image  className={classes["topBar-image"]} src={props.image} width={500} height={500}/> */}
         </div>
       )}
@@ -25,25 +25,35 @@ const TopPart = (props) => {
           fontSize: `${windowWidth > 426 ? "" : "0.7rem"}`,
         }}
       >
-        <div>
-          نوع تخصص :{" "}
-          <span className={classes.boldText}>&nbsp;{props.proficiency}</span>
-        </div>
+        {props.proficiency.length > 0 && (
+          <div>
+            نوع تخصص :{" "}
+            <span className={classes.boldText}>&nbsp;{props.proficiency}</span>
+          </div>
+        )}
 
-        <div>
-          سازمان متبوع :{" "}
-          <span className={classes.boldText}>&nbsp;{props.institude}</span>
-        </div>
+        {props.institude.length > 0 && (
+          <div>
+            سازمان متبوع :{" "}
+            <span className={classes.boldText}>&nbsp;{props.institude}</span>
+          </div>
+        )}
 
-        <div>
-          {" "}
-          منطقه (تهران):
-          <span className={classes.boldText}>&nbsp;{props.region} </span>
-        </div>
-        <div>
-          تلفن:{" "}
-          <span className={classes.boldText}>&nbsp;{props.phoneNumber}</span>
-        </div>
+        {props.region.length > 0 && (
+          <div>
+            {" "}
+            منطقه (تهران):
+            <span className={classes.boldText}>&nbsp;{props.region} </span>
+          </div>
+        )}
+
+        {props.phoneNumber.length > 0 && (
+          <div>
+            تلفن:{" "}
+            <span className={classes.boldText}>&nbsp;{props.phoneNumber}</span>
+          </div>
+        )}
+
         {props.fax.length > 0 && (
           <div>
             فکس : <span className={classes.boldText}>&nbsp;{props.fax}</span>
