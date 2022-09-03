@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Header } from "../components/Header";
+import { Header } from "../components/Header/Header";
 import Hospitals from "../components/Hospitals/Hospitals";
 import Navigation from "../components/Navigation/Navigation";
 import HospitalJsonToObject from "../lib/HospitalJsonToObject";
