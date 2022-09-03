@@ -1,11 +1,8 @@
 import classes from "../../../../styles/TopPar.module.css";
 import useWindowSize from "../../../../hooks/useWindowSize";
 import { Link } from "../../../../lib/Link";
-// import Image from "next/image";
 
 const TopPart = (props) => {
-  // const website = props.website;
-  // console.log(website);
   const windowWidth = useWindowSize();
   return (
     <div
@@ -15,7 +12,6 @@ const TopPart = (props) => {
       {windowWidth < 769 && (
         <div>
           <img className={classes["topBar-image"]} src={props.image} />
-          {/* <Image  className={classes["topBar-image"]} src={props.image} width={500} height={500}/> */}
         </div>
       )}
       <div
@@ -39,7 +35,7 @@ const TopPart = (props) => {
           </div>
         )}
 
-        {props.region.length > 0 && (
+        {props.region.toString().length > 0 && (
           <div>
             {" "}
             منطقه (تهران):
@@ -47,14 +43,14 @@ const TopPart = (props) => {
           </div>
         )}
 
-        {props.phoneNumber.length > 0 && (
+        {props.phoneNumber.toString().length > 0 && (
           <div>
             تلفن:{" "}
             <span className={classes.boldText}>&nbsp;{props.phoneNumber}</span>
           </div>
         )}
 
-        {props.fax.length > 0 && (
+        {props.fax.toString().length > 0 && (
           <div>
             فکس : <span className={classes.boldText}>&nbsp;{props.fax}</span>
           </div>
@@ -81,14 +77,10 @@ const TopPart = (props) => {
       {windowWidth > 769 && (
         <div style={{ width: "45%" }}>
           <img className={classes["topBar-image"]} src={props.image} />
-          {/* <Image  className={classes["topBar-image"]} src={props.image} width={500} height={500}/> */}
         </div>
       )}
     </div>
   );
-
-  // console.log(` windowWidth : ${windowWidth}`);
-  // console.log(typeof windowWidth);
 };
 
 export default TopPart;

@@ -2,7 +2,7 @@ import TopPart from "./TopPart/TopPart";
 import classes from "../../../styles/SingleHospital.module.css";
 import Link from "next/link";
 import useWindowSize from "../../../hooks/useWindowSize";
-import MedicalAreas  from "./MedicalAreas";
+import MedicalAreas from "./MedicalAreas";
 
 const SingleHospital = (props) => {
   const windowWidth = useWindowSize();
@@ -11,10 +11,7 @@ const SingleHospital = (props) => {
     <>
       <div className={classes.contentContainer}>
         {windowWidth < 426 && (
-          <div
-            //  style={{text-align : "left"}}
-            style={{ textAlign: "left", marginBottom: ".5rem" }}
-          >
+          <div style={{ textAlign: "left", marginBottom: ".5rem" }}>
             <Link href="/">
               <a style={{ fontSize: "0.8rem" }}>بازگشت به خانه ←</a>
             </Link>
@@ -36,8 +33,6 @@ const SingleHospital = (props) => {
         <TopPart
           proficiency={props.hospital.proficiency}
           institude={props.hospital.institude}
-          // state={props.hospital.state}
-          // city={props.hospital.city}
           region={props.hospital.region}
           phoneNumber={props.hospital.phoneNumber}
           fax={props.hospital.fax}
@@ -73,7 +68,6 @@ const SingleHospital = (props) => {
           >
             بخش های درمانی
           </div>
-          {/* <div>{props.hospital.medicalAreas}</div> */}
           {props.hospital.hospitalizationAreas.length < 3 ? (
             <div>{props.hospital.medicalAreas}</div>
           ) : (

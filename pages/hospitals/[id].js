@@ -4,7 +4,6 @@ import Head from "next/head";
 
 export async function getStaticPaths() {
   const paths = getAllHospitalIds();
-  // console.log(paths);
   return {
     paths,
     fallback: false,
@@ -23,7 +22,6 @@ export async function getStaticProps({ params }) {
 
 
 const Hospital = ({ hospitalData }) => {
-  // console.log(hospitalData);
   if (typeof window !== "undefined") {
     return (
       <>

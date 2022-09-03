@@ -4,7 +4,6 @@
   justify-content: center;
   margin: 4rem 15%;
 }
-
 .hospitals-container {
   display: grid;
   column-gap: 2rem;
@@ -30,13 +29,11 @@
   justify-content: center;
   margin-top: 2rem;
   color: gray;
-  /* width: 30%; */
 }
 
 
 .searchBox input {
   text-align: right;
-  /* width: 30%; */
   padding: 0.7rem;
   border-radius: 10px;
   font-size: 16px;

@@ -1,28 +1,45 @@
 import HospitalBlock from "./HospitalBlock";
 import classes from "../../styles/Hospitals.module.css";
-import HOSPITALS from "../../lib/HOSPITALS";
 import { useState } from "react";
 import useWindowSize from "../../hooks/useWindowSize";
-import useWindowDimensions from "../../hooks/useWindowDimensions";
+import DropDown from "../DropDown";
 
-// const { HospitalsData } = HOSPITALS;
-
-const getFilteredItems = (searchValue, defaultItems) => {
-  if (!searchValue) {
+const getFilteredItems = (searchValue, dropDownValue, defaultItems) => {
+  if (!searchValue && !dropDownValue) {
     return defaultItems;
+  }
+  if (!dropDownValue) {
+    return defaultItems.filter(
+      (item) =>
+        item.name.toLowerCase().includes(searchValue.toLowerCase()) ||
+        item.medicalAreas.toLowerCase().includes(searchValue.toLowerCase())
+    );
+  }
+  if (!searchValue) {
+    return defaultItems.filter((item) => item.region == dropDownValue);
   }
   return defaultItems.filter(
     (item) =>
-      item.name.toLowerCase().includes(searchValue.toLowerCase()) ||
-      // item.type.includes(searchValue) ||
-      item.medicalAreas.toLowerCase().includes(searchValue.toLowerCase())
+      (item.name.toLowerCase().includes(searchValue.toLowerCase()) &&
+        item.region == dropDownValue) ||
+      (item.medicalAreas.toLowerCase().includes(searchValue.toLowerCase()) &&
+        item.region == dropDownValue)
   );
 };
 
 const Hospitals = (props) => {
   const windowWidth = useWindowSize();
   const [searchValue, setSearchValue] = useState("");
-  const filteredItems = getFilteredItems(searchValue, props.hospitalsData);
+  const [dropDownValue, setDropDownValue] = useState("");
+  const handleDropDownChange = (event) => {
+    setDropDownValue(event.target.value);
+  };
+  const filteredItems = getFilteredItems(
+    searchValue,
+    dropDownValue,
+    props.hospitalsData
+  );
+
   const HospitalItems = filteredItems.map((item) => (
     <HospitalBlock
       key={item.id}
@@ -35,6 +52,10 @@ const Hospitals = (props) => {
   return (
     <>
       <div className={classes.searchBox}>
+        {windowWidth > 425 && (
+          <DropDown value={dropDownValue} onChange={handleDropDownChange} />
+        )}
+
         <input
           onChange={(e) => {
             setSearchValue(e.target.value);
@@ -46,6 +67,15 @@ const Hospitals = (props) => {
           }}
         />
       </div>
+      {windowWidth < 426 && (
+        <div className={classes.searchText} style={{marginLeft:"50px"}}>
+          <DropDown value={dropDownValue} onChange={handleDropDownChange} />
+        </div>
+       
+          // <DropDown value={dropDownValue} onChange={handleDropDownChange} />
+        
+      )}
+
       {searchValue.length > 0 && (
         <div className={classes.searchText}>
           نتیجه جستجو در ارتباط با `{searchValue}` :
