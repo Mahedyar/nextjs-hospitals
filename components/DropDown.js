@@ -34,7 +34,6 @@ const DropDown = (props) => {
   return (
     <div className={`${classes["dropDown-container"]} `}>
       <select
-        // className={`${classes["select-option"]} , ${classes.dropDown} `}
         className={classes.dropDown}
         value={props.value}
         onChange={props.onChange}

@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { Header } from "../components/Header";
 import Hospitals from "../components/Hospitals/Hospitals";
 import Navigation from "../components/Navigation/Navigation";
 import HospitalJsonToObject from "../lib/HospitalJsonToObject";
@@ -20,6 +21,7 @@ export default function Home({ hospitalsData }) {
       </Head>
       <header>
         <Navigation />
+        <Header/>
       </header>
       <Hospitals hospitalsData={hospitalsData.hospitals} />
     </>

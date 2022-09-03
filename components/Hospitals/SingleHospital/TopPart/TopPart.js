@@ -11,7 +11,7 @@ const TopPart = (props) => {
     >
       {windowWidth < 769 && (
         <div>
-          <img className={classes["topBar-image"]} src={props.image} />
+          <img alt={props.name} className={classes["topBar-image"]} src={props.image} />
         </div>
       )}
       <div
@@ -76,7 +76,7 @@ const TopPart = (props) => {
       </div>
       {windowWidth > 769 && (
         <div style={{ width: "45%" }}>
-          <img className={classes["topBar-image"]} src={props.image} />
+          <img alt={props.name} className={classes["topBar-image"]} src={props.image} />
         </div>
       )}
     </div>
