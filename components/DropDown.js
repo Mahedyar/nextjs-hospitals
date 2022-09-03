@@ -26,8 +26,7 @@ const options = [
 
 const DropDown = (props) => {
   const menu = options.map((option) => (
-    <option 
-    value={option.value}>
+    <option key={option.value} value={option.value}>
       {option.label}
     </option>
   ));
@@ -43,7 +42,6 @@ const DropDown = (props) => {
         </option>
         {menu}
       </select>
-    
     </div>
   );
 };
