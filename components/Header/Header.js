@@ -6,9 +6,9 @@ import { DesignerInfo } from "./DesignerInfo";
 export const Header = () => {
   const windowWidth = useWindowSize();
   return (
-    <div className={classes["header-container"]}>
-      {/* {windowWidth < 465 && <DesignerInfo/>} */}
-      <div>
+    <div className={classes["header-container"]} style={{display : `${(windowWidth > 425 ? "flex" : "")}`}}>
+      {windowWidth < 426 && <DesignerInfo/>}
+      <div style={{marginTop : `${(windowWidth > 425 ? "" : "1rem")}`}}>
         <div>
           در این سایت اطلاعات مربوط به ۱۴۶ بیمارستان در سراسر شهر تهران جمع آوری
           شده است . این اطلاعات شامل نشانی ،شماره تلفن ، آدرس ، مراکز درمانی هر
@@ -30,7 +30,7 @@ export const Header = () => {
           </li>
         </ul>
       </div>
-      {windowWidth > 464 && <DesignerInfo />}
+      {windowWidth > 425 && <DesignerInfo />}
     </div>
   );
 };
