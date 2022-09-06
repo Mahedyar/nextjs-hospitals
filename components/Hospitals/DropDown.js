@@ -1,4 +1,4 @@
-import classes from "../styles/DropDown.module.css";
+import classes from "../../styles/DropDown.module.css";
 const options = [
   { value: "1", label: "۱" },
   { value: "2", label: "۲" },

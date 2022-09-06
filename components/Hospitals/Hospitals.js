@@ -2,7 +2,7 @@ import HospitalBlock from "./HospitalBlock";
 import classes from "../../styles/Hospitals.module.css";
 import { useState } from "react";
 import useWindowSize from "../../hooks/useWindowSize";
-import DropDown from "../DropDown";
+import DropDown from "./DropDown";
 
 const getFilteredItems = (searchValue, dropDownValue, defaultItems) => {
   if (!searchValue && !dropDownValue) {
@@ -71,9 +71,6 @@ const Hospitals = (props) => {
         <div className={classes.searchText} style={{marginLeft:"50px"}}>
           <DropDown value={dropDownValue} onChange={handleDropDownChange} />
         </div>
-       
-          // <DropDown value={dropDownValue} onChange={handleDropDownChange} />
-        
       )}
 
       {searchValue.length > 0 && (
